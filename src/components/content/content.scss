@@ -1,0 +1,199 @@
+.contentBlock {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 0 0;
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 28px;
+
+  }
+
+  &-centralBlock {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    &-leftBlock {
+      width: 50%;
+
+      p {
+        margin: 34px 0 9px 5px;
+      }
+
+      &-date {
+        width: 40%;
+        height: 35px;
+        border-radius: 7px;
+        border:1px solid #E6E7E8;
+        padding-left: 15px;
+      }
+
+      &-blockTime {
+        width: 94%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+
+      &-input {
+        width: 90%;
+        height: 55px;
+        color: #BCBEC0;
+        border: 1px solid #BCBEC0;
+        background-color: white;
+        border-radius: 7px;
+        padding-left: 10px;
+        font-family: Inter, serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        display: flex;
+      }
+    }
+
+    &-rightBlock {
+      width: 45%;
+
+      p{
+        margin: 35px 0 9px 2px;
+      }
+
+      &-radio {
+        display: flex;
+        flex-wrap: wrap;
+        width: 200px;
+
+        &-inputRadio {
+          display: flex;
+          align-items: center;
+          margin: 5px 0 10px 0;
+          &-input {
+            width: 24px;
+            height: 24px;
+            color: #0D63F3;
+            margin-right: 15px;
+          }
+        }
+      }
+      &-switch{
+        margin-top: 25px;
+        input{
+          width: 35px;
+          height: 20px;
+          position: relative;
+          -webkit-appearance: none;
+          outline: none;
+          background-color: #c6c6c6;
+          border-radius: 20px;
+          transition: .5s;
+          box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+          cursor: pointer;
+          &:checked{
+            background: #40e551;
+          }
+          &:before{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background: #fff;
+            transition: .5s;
+            transform: scale(1.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,.2);
+
+          }
+          &:checked:before{
+            left: 15px;
+          }
+
+        }
+      }
+      &-line{
+        width: 95%;
+        height: 1px;
+        background-color: #E6E7E8;
+        margin-top: 22px;
+      }
+      &-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 225px;
+        height: 60px;
+        background-color: #0D63F3;
+        color: white;
+        font-family: Inter,serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        &-icon{
+          width: 30px;
+          height: 30px;
+          background: url("../img/DownloadSimple.png");
+          margin-left: 10px;
+        }
+        &:hover{
+          background-color: #BCBEC0;
+          color: black;
+          transition: 0.5s;
+
+        }
+      }
+      &-chatSwitch{
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      &-checkboxSetting{
+        width: 60%;
+      }
+      &-checkboxMarg{
+        margin: 8px 0 8px 0;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    &-centralBlock {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &-leftBlock{
+        width: 100%;
+      }
+      &-rightBlock{
+        width: 100%;
+      }
+    }
+  }
+  &-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    &-bottomButton{
+      width: 225px;
+      height: 60px;
+      background-color: #0D63F3;
+      color: white;
+      border: none;
+    }
+  }
+}
